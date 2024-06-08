@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.taskManager {
+    height: 50vh;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+.task {
+    background-color: white;
+    width: 55%;
+    height: 70%;
+    padding: 20px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#taskList {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    margin-bottom: 15px;
+
+}
+
+/* Hide scrollbar*/
+#taskList::-webkit-scrollbar {
+
+    display: none;
+} 
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: grab;
+    word-break: break-word;
+    min-height: 3.5em;
+    -webkit-user-select: none; /* Can't select the text on the element */
+}
+
+li input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+li span {
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.bx {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.bx-edit-alt:hover {
+    color: green;
+}
+
+.bx-x:hover {
+    color: red;
+}
+
+.taskAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskAdd input {
+    padding: 10px;
+    border-radius: 15px 0 0 15px;
+    width: 80%;
+    border: 1px solid #ccc;
+    outline: none;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    height: 40px;
+}
+
+.taskAdd button {
+    padding: 10px;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    outline: none;
+    background-color: #224b88;
+    width: 20%;
+    color: white;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    height: 40px;
+}
+
+.taskAdd button:hover {
+    opacity: 0.8;
+}
+
+.text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #224b88;
+    margin-bottom: 25px;
+}
+
+.text p {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.text p:nth-child(odd) {
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    color: white;
+}
