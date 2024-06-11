@@ -48,6 +48,7 @@
 } 
 
 li {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,6 +58,7 @@ li {
     background-color: white;
     cursor: grab;
     word-break: break-word;
+    max-height: 3.5em;
     min-height: 3.5em;
     -webkit-user-select: none; /* Can't select the text on the element */
 }
@@ -113,6 +115,10 @@ li span {
     height: 40px;
 }
 
+.taskAdd input[type="text"] {
+    border-radius: 0;
+}
+
 .taskAdd button {
     padding: 10px;
     border-radius: 0 15px 15px 0;
@@ -166,4 +172,23 @@ li span {
         -1px 1px 0 #000,
         1px 1px 0 #000;
     color: white;
+}
+
+
+.hide {
+
+    display: none;
+}
+
+.date {
+
+    position: absolute;
+    top: 14%;
+    left: 118px;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+
 }

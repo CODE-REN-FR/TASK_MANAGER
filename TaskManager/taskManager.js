@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const taskList = document.getElementById("taskList");
     const taskInput = document.getElementById("taskInput");
-
+    const taskDate = document.getElementById("inputDate")
     const localStorageTasks = localStorage.getItem("tasks") || "";
+    var clicked = false
 
     let inputLi;
     let parent;
@@ -11,12 +12,29 @@ document.addEventListener("DOMContentLoaded", () => {
         const task = taskInput.value.trim();
         if (task) {
             const li = document.createElement("li");
-            li.innerHTML = `<span>${task}</span><i class='bx bx-edit-alt' id="editTask"></i><i class='bx bx-x' id="deleteTask"></i>`;
+            li.innerHTML = `<span>${task}</span><span class="hide date">${taskDate.value}</span><i class='bx bx-calendar' id="date"></i><i class='bx bx-edit-alt' id="editTask"></i><i class='bx bx-x' id="deleteTask"></i>`;
             taskList.appendChild(li);
             taskInput.value = "";
             updateLocalStorage();
         }
     }
+
+    document.addEventListener('click', (event) => {
+
+        if(event.target.id === "date") {
+
+            
+
+            if(!clicked) {
+                clicked = true
+                event.target.parentNode.querySelector(".date").classList.remove("hide")
+            } else if(clicked) {
+
+                clicked = false
+                event.target.parentNode.querySelector(".date").classList.add("hide")
+            }
+        }
+    })
 
     document.addEventListener("click", (event) => {
         if (event.target.id === "addTaskButton") {
