@@ -65,6 +65,8 @@ Here's an example of what the application looks like:
 
 ![Task Manager Example](screenshot-1.png)
 ![Task Manager Example](screenshot-2.png)
+![Task Manager Example](image-task-manager.png)
+
 
 
 ## License
